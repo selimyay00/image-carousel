@@ -1,18 +1,11 @@
+After creating and preparing the React app, I created an array called images and added all the image URLs. I then started building the JSX structure.
 
-After creating and preparing the React app, I've created an array called images and added all the image URL's. Then I've started to build the JSX structure.
+I created a wrapper div element with the class name of slide-container. Inside this div, I added a header.
 
-Created a wrapper div element with the class name of slide container.
+For navigation, I added buttons to skip to the next slide and go back to the previous slide, displayed as left and right arrows. I added onClick event handlers to these buttons to provide functionality.
 
-Added a header inside the div.
+Realizing the need to track the current slide, I used the useState hook to create a state called currentImage, initialized to 0.
 
-Added buttons for skipping to next slide and going back to the previous slide. These buttons are shown as left and right arrows.
+For each image in the images array, I created a div and added an img element inside using Vanilla JavaScript for the programming part. While I'm aware that I could achieve the same with ternary or && operators, I prefer using Vanilla JavaScript.
 
-Added onClick event handler to buttons in order to add the functionality.
-
-Then I used JavaScript array .map() method and called a callback function for each image in the images array.
-
-I realized that I need to create a React state because I had to show which slide we're currently at. For that, I used useState hook and created a state called currentImage and initialized as 0.
-
-Created a div for each images and added the img element inside. I used Vanilla JavaScript for programming part. I know I can also do the same thing with ternary or && operators but I like using Vanilla JavaScript.
-
-The logic goes like that: If currentImage is equal to images.length - 1, (which means we're at the last image) set currentImage to 0 again. So that it can go back to the first slide. Else, add 1 to the currentImage.
+The logic is as follows: If currentImage is equal to images.length - 1 (indicating the last image), I set currentImage to 0, allowing it to go back to the first slide. Otherwise, I increment currentImage by 1.
