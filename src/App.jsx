@@ -11,20 +11,30 @@ const images = [
 function App() {
   const [currentImage, setCurrentImage] = useState(0);
 
-  function skipSlide() {
-    // setCurrentImage(currentImage + 1) 
-      // this will generate a bug after the last slide
-      
-    // when it comes to the last slide,
-      // currentImage should go back to the first one
-        // which is index 0
-          // which is length - 1
-
+  function nextImage() {
+    // setCurrentImage(currentImage - 1); => 
+        // when it comes to the last image
+          // clicking on next slide button
+            // it will create a bug
+    
     if (currentImage === images.length - 1) {
       setCurrentImage(0);
     } else {
       setCurrentImage(currentImage + 1);
     }
+  }
+
+  function previousImage() {
+    // setCurrentImage(currentImage - 1); => 
+        // when it comes to the first image
+          // clicking on previous slide button
+            // it will also create a bug
+
+            if (currentImage === 0) {
+              setCurrentImage(images.length - 1);
+            } else {
+              setCurrentImage(currentImage - 1);
+            }
   }
 
   return (
@@ -34,14 +44,14 @@ function App() {
         <div className="arrow-buttons">
             <button 
               className="left-arrow"
-              onClick={skipSlide}
+              onClick={previousImage}
             >
               ⬅
             </button>
 
             <button 
               className="right-arrow"
-              onClick={skipSlide}
+              onClick={nextImage}
             >
               ⮕
             </button>
