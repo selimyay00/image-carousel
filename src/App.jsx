@@ -13,15 +13,17 @@ function App() {
   const [currentImage, setCurrentImage] = useState(0);
 
   function nextImage() {
-    // setCurrentImage(currentImage - 1); => 
+    // setCurrentImage(currentImage + 1); 
+      // If I use this,
         // when it comes to the last image
           // clicking on next slide button
-            // it will create a bug
+            // will create a bug
     
+    // images.length - 1 is equal to the last index
     if (currentImage === images.length - 1) {
-      setCurrentImage(0);
+      setCurrentImage(0); // go back to the first index(image)
     } else {
-      setCurrentImage(currentImage + 1);
+      setCurrentImage(currentImage + 1); 
     }
   }
 
