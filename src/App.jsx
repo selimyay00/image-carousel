@@ -1,13 +1,11 @@
 import { useState } from "react";
 
-// change it using api requests
 const images = [
-  "https://images.pexels.com/photos/3836292/pexels-photo-3836292.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-  "https://images.pexels.com/photos/2792157/pexels-photo-2792157.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-  "https://images.pexels.com/photos/1166209/pexels-photo-1166209.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-  "https://images.pexels.com/photos/1661179/pexels-photo-1661179.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-  "https://images.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
-]
+  "https://images.pexels.com/photos/3408746/pexels-photo-3408746.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+  "https://images.pexels.com/photos/2072573/pexels-photo-2072573.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+  "https://images.pexels.com/photos/1581098/pexels-photo-1581098.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+  "https://images.pexels.com/photos/3680315/pexels-photo-3680315.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+];
 
 function App() {
   const [currentImage, setCurrentImage] = useState(0);
@@ -43,7 +41,7 @@ function App() {
   return (
     <div>
       <div className="slide-container">
-        <h2>Image Carousel</h2>
+        <h2 className="header">Image Carousel</h2>
         <div className="arrow-buttons">
             <button 
               className="left-arrow"
@@ -64,7 +62,7 @@ function App() {
             if (currentImage === index) {
               return (
                 <div key={image}>
-                  <img src={image} alt="image" id="image" />
+                  <img src={image} alt="image" className="slide-images" />
                 </div>
               )
             }

@@ -4,19 +4,20 @@
 
 body {
   margin: 0;
-  font-family:'Courier New', Courier, monospace;
-  background-color: #8458B3; 
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: black; 
+  color: lightgray;
 }
 
 .slide-container {
   padding: 30px;
   border: 1px solid black;
   border-radius: 10px;
-  width: 60%;
+  width: 80%;
   height: fit-content;
   margin: 10% auto;
   text-align: center;
-  background-color: #a0d2eb;
+  background-color: #222222;
 }
 
 .arrow-buttons {
@@ -26,22 +27,32 @@ body {
 }
 
 .left-arrow, .right-arrow {
-  border-radius: 10px;
-  background-color: #8458B3;
+  border-radius: 5px;
+  background-color: lightgray;
   color: lightblue;
   height: 28px;
 }
 
 button:hover {
-  background-color: darkolivegreen;
+  background-color: darkslategray;
 }
 
-#image {
+.slide-images {
   height: 200px;
   max-height: 150px;
-  width: 200px;
+  width: 400px;
   max-width: 200px;
   border-radius: 10px;
   margin-top: 30px;
   object-fit: cover;
+}
+
+.arrow-buttons > button {
+  min-width: 50px;
+  min-height: 30px;
+  color: #222222;
+}
+
+.header {
+  letter-spacing: 2px;
 }
